@@ -1,0 +1,425 @@
+/* --- Color Palette & Fonts --- */
+:root {
+    --color-navy: #002147;      /* Deep Navy Blue */
+    --color-gold: #FFD700;      /* Standard Gold/Yellow */
+    --color-light-gold: #F0E68C; /* Light Gold/Cream for top bar and accents */
+    --color-white: #ffffff;
+    --color-light-grey: #f8f8f8; /* Light background for sections */
+    --color-dark-grey: #333333;
+    --color-text-light: #cccccc;
+    
+    --font-heading: 'Playfair Display', serif; /* For Hero/Main Emphasis */
+    --font-body: 'Open Sans', sans-serif;      /* Modern and clean */
+}
+
+/* --- Base Styles --- */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark-grey);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+/* --- 1. Top Bar (Light Gold/Cream) --- */
+.top-bar {
+    background-color: var(--color-light-gold);
+    color: var(--color-navy);
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.top-nav a {
+    color: var(--color-navy);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+/* --- 2. Main Navigation Bar (Navy Blue) --- */
+.main-nav {
+    background-color: var(--color-navy);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.logo-icon {
+    font-family: var(--font-heading);
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-right: 15px;
+}
+
+.phone-number {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--color-white);
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+}
+
+/* --- 3. Hero Section --- */
+.hero {
+    background: url('hero-bg-placeholder.jpg') center center/cover no-repeat;
+    height: 60vh; /* Adjust height as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Use a gradient or light overlay to match the image style */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: var(--color-white);
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-light-gold);
+}
+
+/* --- 4. Mid Section Nav (Small dark blue strip) --- */
+.mid-section-nav {
+    background-color: var(--color-navy);
+    height: 5px; /* Minimal height to match the picture */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 5. Services Overview Section (Light Grey) --- */
+.services-overview {
+    background-color: var(--color-light-grey);
+}
+
+.service-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Image + 2 Service Columns */
+    gap: 30px;
+    align-items: center;
+}
+
+.service-left {
+    display: flex;
+    justify-content: center;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-column {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-gold {
+    font-size: 2.5em;
+    color: var(--color-gold);
+    margin-bottom: 15px;
+}
+
+.service-column h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-dark-grey);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.service-column p {
+    font-size: 0.95em;
+    color: var(--color-dark-grey);
+}
+
+/* --- 6. Team/Specialties Section (White/Background Split) --- */
+.specialties-section {
+    background-color: var(--color-white);
+    padding-bottom: 0;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0; /* Cards touch in the image */
+    align-items: stretch;
+}
+
+.specialty-card {
+    padding: 40px;
+    min-height: 250px; /* Ensure visual height consistency */
+}
+
+/* Team Card Styling (Left-most) */
+.team-member-card {
+    background-color: var(--color-white); /* White area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.role {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* Navy Card Styling (Middle and Right) */
+.navy-card, .quote-card {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+.navy-card h3 {
+    color: var(--color-gold);
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.quote-card {
+    position: relative;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1em;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+.quote-icon {
+    font-family: var(--font-heading);
+    font-size: 5em;
+    color: var(--color-gold);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    line-height: 0.5;
+}
+
+/* --- 7. Footer Section (Dark Navy) --- */
+footer {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 60px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; /* Match column widths in the image */
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: var(--color-gold);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+}
+
+/* Contact Form Styling */
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-light-gold);
+    border-radius: 0;
+    font-size: 0.9em;
+    background-color: var(--color-white);
+    color: var(--color-dark-grey);
+    box-sizing: border-box;
+}
+
+.send-button {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: var(--color-light-gold);
+}
+
+/* Links and Contact Info Styling */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.links-col li a:hover {
+    color: var(--color-gold);
+}
+
+.contact-info-col p {
+    margin: 5px 0;
+    color: var(--color-text-light);
+}
+
+.map-placeholder {
+    height: 150px;
+    background-color: #00152a; /* Darker Navy */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-light);
+    font-size: 0.9em;
+}
+
+.copyright {
+    font-size: 0.8em;
+    margin-top: 30px;
+    color: var(--color-light-gold);
+}
+
+/* --- 8. Sub Footer (Light Grey) --- */
+.sub-footer {
+    background-color: var(--color-light-grey);
+    padding: 15px 0;
+    font-size: 0.8em;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sub-footer-text p {
+    margin: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .services-overview .service-columns {
+        grid-template-columns: 1fr;
+    }
+    .service-left {
+        display: none; /* Hide large image on smaller screens */
+    }
+    .specialties-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-col {
+        order: 3; /* Move form to the bottom on mobile */
+    }
+}
