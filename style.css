@@ -114,7 +114,7 @@ h1, h2, h3, h4 {
 
 /* --- 3. Hero Section --- */
 .hero {
-    background: url('hero-bg-placeholder.jpg') center center/cover no-repeat;
+    background: url('images/luxury-homes.jpeg') center center/cover no-repeat;
     height: 60vh; /* Adjust height as needed */
     position: relative;
     display: flex;
@@ -422,4 +422,5 @@ footer {
     .contact-form-col {
         order: 3; /* Move form to the bottom on mobile */
     }
+
 }
